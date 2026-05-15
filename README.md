@@ -1,69 +1,46 @@
-# React + TypeScript + Vite
+# P5 Generative Gallery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A stunning gallery of 33 generative art sketches and interactive experiments built with **Next.js**, **React**, and **p5.js**. This project was originally a Vite + React application and has been beautifully remodelled into a Next.js template inspired by the Image Gallery Starter.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **33 Unique Sketches**: Explore a variety of creative coding concepts including Flow Fields, Reaction Diffusion, Double Pendulums, Fourier Epicycles, Cellular Automata, and more.
+- **Next.js App**: Fast, optimized, and SSR-ready architecture for displaying the gallery.
+- **Client-Side p5.js Integration**: Uses dynamic imports to seamlessly run p5.js sketches in a modern React environment without SSR conflicts.
+- **Masonry Gallery**: An elegant, responsive masonry grid layout displaying thumbnails of all 33 days.
+- **Immersive Viewer**: A dedicated, full-screen interactive viewer for each sketch with smooth animations and togglable info overlays.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Framework**: [Next.js](https://nextjs.org/)
+- **UI & Styling**: [React](https://reactjs.org/) + [Tailwind CSS](https://tailwindcss.com/)
+- **Generative Art**: [p5.js](https://p5js.org/)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+First, install the dependencies:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Then, run the development server:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the gallery. Click on any thumbnail to interact with the sketch!
+
+## Project Structure
+
+- `pages/index.tsx`: The main gallery page with the masonry layout.
+- `pages/p5/[id].tsx`: The dynamic route rendering individual p5 sketches.
+- `components/P5Viewer.tsx`: The client-side wrapper that dynamically loads the p5 canvas.
+- `components/P5Wrapper.tsx`: The React component that manages the p5 instance lifecycle.
+- `utils/days/`: Contains the logic for all 33 generative sketches.
+- `utils/metadata.ts`: Static metadata (titles, descriptions, thumbnail paths) for the gallery grid.
+
+## License
+
+MIT
