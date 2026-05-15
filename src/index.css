@@ -80,6 +80,16 @@ body {
   box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
 }
 
+.homepage-logo {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.5rem auto;
+  display: block;
+  border-radius: 50%;
+  box-shadow: 0 0 40px rgba(0, 255, 204, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
 .dashboard-header h1 {
   font-size: clamp(3.5rem, 8vw, 6.5rem);
   font-weight: 800;
