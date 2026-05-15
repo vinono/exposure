@@ -16,9 +16,9 @@ const Dashboard: React.FC<DashboardProps> = ({ onSelectDay, currentDayId }) => {
   return (
     <div className="dashboard">
       <header className="dashboard-header">
-        <div className="badge">Project: Code & Art</div>
-        <h1>33 Days of p5.js</h1>
-        <p>A curated odyssey through the algorithmic beauty of mathematics and creative physics.</p>
+        <div className="badge">Project: Photography Tool</div>
+        <h1>Photo Exposure Simulator</h1>
+        <p>Adjust camera settings like exposure, aperture, and shutter speed to see their effect in real-time.</p>
       </header>
       <div className="days-grid">
         {days.map((day) => {
