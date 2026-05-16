@@ -19,7 +19,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onSelectDay, currentDayId }) => {
         <div className="badge">Project: Code & Art</div>
         <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Creative Coding Logo" className="homepage-logo" />
         <h1>33 Days of p5.js</h1>
-        <p>A curated odyssey through the algorithmic beauty of mathematics and creative physics.</p>
+        <p>A curated odyssey exploring the intersection of code and art. Over the course of 33 days, this gallery showcases algorithmic beauty through mathematical patterns, creative physics, particle simulations, and generative aesthetics—all crafted from scratch with p5.js.</p>
         <div className="hero-glow"></div>
       </header>
       <div className="days-grid">
