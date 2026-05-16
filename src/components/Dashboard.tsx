@@ -16,10 +16,10 @@ const Dashboard: React.FC<DashboardProps> = ({ onSelectDay, currentDayId }) => {
   return (
     <div className="dashboard">
       <header className="dashboard-header">
-        <div className="badge">Project: Photography Tool</div>
-        <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Exposure Simulator Logo" className="homepage-logo" />
-        <h1>Photo Exposure Simulator</h1>
-        <p>Adjust camera settings like exposure, aperture, and shutter speed to see their effect in real-time.</p>
+        <div className="badge">Project: Code & Art</div>
+        <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Creative Coding Logo" className="homepage-logo" />
+        <h1>33 Days of p5.js</h1>
+        <p>A curated odyssey through the algorithmic beauty of mathematics and creative physics.</p>
         <div className="hero-glow"></div>
       </header>
       <div className="days-grid">
